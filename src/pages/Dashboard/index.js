@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import moment from 'moment';
+
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { lighten, makeStyles } from '@material-ui/core/styles';
@@ -326,6 +328,10 @@ function EnhancedTable({
     setPage(0);
   };
 
+  const formatedDate = date => {
+    return moment(date).format('MM-DD-YYYY');
+  };
+
   const isSelected = name => selected.indexOf(name) !== -1;
 
   const handleDelete = () => {
@@ -403,10 +409,12 @@ function EnhancedTable({
                         >
                           {row.name}
                         </TableCell>
-                        <TableCell>{row.manufacturingDate}</TableCell>
+                        <TableCell>
+                          {formatedDate(row.manufacturingDate)}
+                        </TableCell>
                         <TableCell>{row.perishable ? 'Sim' : 'Não'}</TableCell>
                         <TableCell>
-                          {row.expirationDate || 'Sem validade'}
+                          {formatedDate(row.expirationDate) || 'Sem validade'}
                         </TableCell>
                         <TableCell>
                           {row.price.toLocaleString('pt-BR', {
