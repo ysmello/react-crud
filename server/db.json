@@ -1,0 +1,17 @@
+{
+  "auth": {
+    "email": "yuridemeello@gmail.com",
+    "password": "teste123",
+    "token": "b82ead59ad4e6ea227a69dbc852733dd"
+  },
+  "products": [
+    {
+      "name": "Produto teste",
+      "manufacturingDate": "2020-09-03",
+      "perishable": true,
+      "expirationDate": "2020-09-17",
+      "price": 2,
+      "id": "f09a22e3-4f78-486d-a3f4-01294aec0944"
+    }
+  ]
+}
