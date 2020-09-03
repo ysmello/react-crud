@@ -1,3 +1,7 @@
+### Start json-server
+
+``` yarn json-server --watch server/db.json --port 3001```
+
 <<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
